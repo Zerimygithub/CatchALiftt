@@ -1,0 +1,77 @@
+/* ===========================================================
+   CatchALiftt Header
+   =========================================================== */
+
+.app-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  height: 72px;
+
+  padding: 0 24px;
+
+  background: white;
+
+  box-shadow: var(--shadow-sm);
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 100;
+}
+
+.header-left {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+}
+
+.header-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.logo {
+  width: 40px;
+
+  height: 40px;
+}
+
+.brand-name {
+  font-size: var(--font-lg);
+
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+.icon-button {
+  width: 44px;
+
+  height: 44px;
+
+  border: none;
+
+  background: transparent;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  transition: var(--transition-fast);
+
+  font-size: 20px;
+}
+
+.icon-button:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
