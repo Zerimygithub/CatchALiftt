@@ -1,0 +1,103 @@
+/* ===========================================================
+   CatchALiftt Forms
+   =========================================================== */
+
+/* Input */
+
+.input {
+  width: 100%;
+
+  padding: 12px 16px;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-md);
+
+  font-size: var(--font-md);
+
+  background: white;
+
+  color: var(--color-text);
+
+  transition: var(--transition-fast);
+}
+
+.input:focus {
+  outline: none;
+
+  border-color: var(--color-primary);
+
+  box-shadow: 0 0 0 3px rgba(200, 155, 60, 0.15);
+}
+
+/* Textarea */
+
+.textarea {
+  width: 100%;
+
+  min-height: 120px;
+
+  resize: vertical;
+
+  padding: 16px;
+
+  border-radius: var(--radius-md);
+
+  border: 1px solid var(--color-border);
+}
+
+/* Select */
+
+.select {
+  width: 100%;
+
+  padding: 12px;
+
+  border-radius: var(--radius-md);
+
+  border: 1px solid var(--color-border);
+}
+
+/* Checkbox */
+
+.checkbox {
+  width: 18px;
+
+  height: 18px;
+}
+
+/* Radio */
+
+.radio {
+  width: 18px;
+
+  height: 18px;
+}
+
+/* Form Group */
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+/* Label */
+
+.label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-weight: var(--fw-semibold);
+}
+
+/* Error */
+
+.input-error {
+  border-color: var(--color-danger);
+}
+
+/* Success */
+
+.input-success {
+  border-color: var(--color-success);
+}
