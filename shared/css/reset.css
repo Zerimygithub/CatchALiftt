@@ -1,0 +1,94 @@
+/* ===========================================================
+   CatchALiftt Reset
+   File: reset.css
+   =========================================================== */
+
+/* Box sizing */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default spacing */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Smooth scrolling */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Body */
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Images */
+
+img,
+picture,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+/* Form Elements */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Buttons */
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Links */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Lists */
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* Tables */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Textarea */
+
+textarea {
+  resize: vertical;
+}
+
+/* Prevent overflow */
+
+body {
+  overflow-x: hidden;
+}
