@@ -1,0 +1,318 @@
+/* ===========================================
+   CatchALiftt Design System v1.0
+   =========================================== */
+
+:root {
+  /* ========= Brand Colors ========= */
+
+  --color-background: #f8f5f0;
+  --color-surface: #ffffff;
+
+  --color-primary: #c89b3c;
+  --color-primary-dark: #b4862e;
+  --color-primary-light: #e7d19a;
+
+  --color-text: #1f1f1f;
+  --color-text-light: #666666;
+
+  --color-border: #e5e5e5;
+
+  --color-success: #2e7d32;
+  --color-warning: #f9a825;
+  --color-danger: #d32f2f;
+  --color-info: #1976d2;
+
+  /* ========= Typography ========= */
+
+  --font-family: Inter, "SF Pro Display", Arial, sans-serif;
+
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-md: 16px;
+  --font-lg: 20px;
+  --font-xl: 24px;
+  --font-2xl: 32px;
+
+  /* ========= Font Weight ========= */
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* ========= Radius ========= */
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+
+  /* ========= Spacing ========= */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+
+  /* ========= Shadow ========= */
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+  --shadow-lg: 0 15px 35px rgba(0, 0, 0, 0.12);
+
+  /* ========= Animation ========= */
+
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.45s ease;
+}
+/* ===========================================
+   Global Reset
+=========================================== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+
+  font-size: var(--font-md);
+
+  color: var(--color-text);
+
+  background: var(--color-background);
+
+  line-height: 1.5;
+
+  -webkit-font-smoothing: antialiased;
+
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+
+  outline: none;
+
+  background: none;
+
+  cursor: pointer;
+
+  font-family: inherit;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+
+  outline: none;
+
+  border: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+/* ===========================================
+   Buttons
+=========================================== */
+
+.btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  min-height: 48px;
+
+  padding: 0 22px;
+
+  border-radius: var(--radius-md);
+
+  font-size: var(--font-md);
+
+  font-weight: var(--fw-semibold);
+
+  transition: var(--transition-normal);
+
+  cursor: pointer;
+}
+
+/* ---------- Primary ---------- */
+
+.btn-primary {
+  background: var(--color-primary);
+
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-dark);
+
+  transform: translateY(-2px);
+}
+
+/* ---------- Secondary ---------- */
+
+.btn-secondary {
+  background: white;
+
+  color: var(--color-text);
+
+  border: 1px solid var(--color-border);
+}
+
+.btn-secondary:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+/* ---------- Outline ---------- */
+
+.btn-outline {
+  background: transparent;
+
+  color: var(--color-primary);
+
+  border: 2px solid var(--color-primary);
+}
+
+.btn-outline:hover {
+  background: var(--color-primary);
+
+  color: white;
+}
+
+/* ---------- Danger ---------- */
+
+.btn-danger {
+  background: var(--color-danger);
+
+  color: white;
+}
+
+/* ---------- Success ---------- */
+
+.btn-success {
+  background: var(--color-success);
+
+  color: white;
+}
+
+/* ---------- Disabled ---------- */
+
+.btn:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+/* ===========================================
+   Form Controls
+=========================================== */
+
+.input {
+  width: 100%;
+
+  min-height: 48px;
+
+  padding: 0 16px;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-md);
+
+  background: white;
+
+  color: var(--color-text);
+
+  font-size: var(--font-md);
+
+  transition: var(--transition-normal);
+}
+
+.input:focus {
+  border-color: var(--color-primary);
+
+  box-shadow: 0 0 0 4px rgba(200, 155, 60, 0.15);
+}
+
+.textarea {
+  width: 100%;
+
+  min-height: 120px;
+
+  padding: 16px;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-md);
+
+  resize: vertical;
+
+  font: inherit;
+}
+
+.label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-weight: var(--fw-semibold);
+
+  color: var(--color-text);
+}
+/* ===========================================
+   Cards
+=========================================== */
+
+.card {
+  background: white;
+
+  border-radius: var(--radius-lg);
+
+  padding: 24px;
+
+  box-shadow: var(--shadow-sm);
+
+  transition: var(--transition-normal);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+
+  transform: translateY(-2px);
+}
