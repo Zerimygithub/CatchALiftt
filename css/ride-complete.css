@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #f6f3ee;
+  font-family: Inter, sans-serif;
+}
+
+.ride-complete-page {
+  max-width: 700px;
+  margin: auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.success-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #d4af37;
+  color: white;
+  font-size: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3);
+}
+
+h1 {
+  margin-top: 30px;
+  color: #0f172a;
+  font-size: 42px;
+}
+
+.subtitle {
+  color: #64748b;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.trip-card {
+  background: white;
+  border-radius: 24px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.trip-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.trip-row:last-child {
+  border: none;
+}
+
+.rating-section {
+  background: white;
+  border-radius: 24px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.stars {
+  margin-top: 15px;
+}
+
+.star {
+  font-size: 42px;
+  cursor: pointer;
+  color: #ddd;
+  transition: 0.3s;
+}
+
+.star:hover {
+  color: #d4af37;
+  transform: scale(1.2);
+}
+
+.reward-card {
+  background: linear-gradient(135deg, #d4af37, #f4d06f);
+  color: white;
+  padding: 25px;
+  border-radius: 24px;
+  margin-bottom: 30px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.primary-btn {
+  background: #d4af37;
+  color: white;
+  border: none;
+  padding: 18px;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.secondary-btn {
+  background: white;
+  border: none;
+  padding: 18px;
+  border-radius: 16px;
+  cursor: pointer;
+}

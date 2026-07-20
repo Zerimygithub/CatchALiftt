@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f5f1eb;
+  font-family: "Poppins", sans-serif;
+  color: #111;
+}
+
+.tracking-page {
+  width: 100%;
+  padding: 40px 60px;
+}
+.ride-status {
+  width: 95%;
+  margin: 20px auto;
+  padding: 18px;
+  border-radius: 16px;
+  background: #ffffff;
+  font-weight: 600;
+  text-align: center;
+  color: #111827;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.logo {
+  font-size: 42px;
+  font-weight: 800;
+}
+
+.logo span {
+  color: #d7a326;
+}
+
+.nav-right {
+  display: flex;
+  gap: 14px;
+}
+
+.nav-btn {
+  width: 54px;
+  height: 54px;
+  border: none;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  font-size: 18px;
+}
+
+.tracking-hero {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  border-radius: 40px;
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+
+.map-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.route-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.car {
+  position: absolute;
+  width: 90px;
+  z-index: 5;
+}
+
+.car1 {
+  top: 380px;
+  left: 100px;
+}
+
+.car2 {
+  top: 280px;
+  left: 420px;
+}
+
+.car3 {
+  top: 340px;
+  left: 700px;
+}
+
+.car4 {
+  top: 160px;
+  left: 950px;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.eta-card {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  padding: 24px;
+  border-radius: 28px;
+  text-align: center;
+}
+
+.eta-card h3 {
+  color: #d7a326;
+  margin-bottom: 10px;
+}
+
+.eta-card i {
+  font-size: 28px;
+  color: #d7a326;
+  margin-bottom: 10px;
+}
+
+.driver-card {
+  padding: 28px;
+  border-radius: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.driver-left {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.driver-car {
+  width: 180px;
+}
+
+.driver-left h2 {
+  font-size: 42px;
+}
+
+.verified {
+  color: #d7a326;
+  margin-top: 8px;
+}
+
+.ride-info {
+  margin-top: 10px;
+  color: #555;
+}
+
+.driver-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.host-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+}
+
+.call-btn {
+  background: #d7a326;
+  color: white;
+  border: none;
+  padding: 18px 26px;
+  border-radius: 18px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.location-card {
+  padding: 30px;
+  border-radius: 32px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.location-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.gold-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #d7a326;
+}
+
+.black-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: black;
+}
+
+.line {
+  width: 3px;
+  height: 90px;
+  background: #ddd;
+  margin: 10px 0;
+}
+
+.location-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.location-details small {
+  color: #777;
+}
+
+.location-details h4 {
+  font-size: 30px;
+  margin-top: 8px;
+}
+
+.ride-fare {
+  text-align: right;
+}
+
+.ride-fare h2 {
+  font-size: 48px;
+}
+
+.timer-card {
+  padding: 30px;
+  border-radius: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.timer {
+  font-size: 70px;
+  font-weight: 800;
+}
+
+.bottom-actions {
+  display: flex;
+  gap: 20px;
+}
+
+.action-btn {
+  flex: 1;
+  height: 70px;
+  border: none;
+  border-radius: 24px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.light {
+  background: white;
+}
+
+.gold {
+  background: #d7a326;
+  color: white;
+}
+
+@media (max-width: 900px) {
+  .tracking-page {
+    padding: 24px;
+  }
+
+  .driver-card {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .location-card {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .bottom-actions {
+    flex-direction: column;
+  }
+}

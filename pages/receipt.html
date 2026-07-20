@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Trip Receipt | CatchALift</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/receipt.css" />
+  </head>
+
+  <body>
+    <main class="receipt-page">
+      <section class="receipt-header">
+        <div class="success-icon">✓</div>
+
+        <h1>Trip Receipt</h1>
+
+        <p>Your journey has been completed successfully.</p>
+      </section>
+
+      <section class="receipt-card">
+        <div class="receipt-row">
+          <span>Trip ID</span>
+          <strong>CAL-2026-00125</strong>
+        </div>
+
+        <div class="receipt-row">
+          <span>Host</span>
+          <strong>Rahul Sharma</strong>
+        </div>
+
+        <div class="receipt-row">
+          <span>Vehicle</span>
+          <strong>Toyota Innova</strong>
+        </div>
+
+        <div class="receipt-row">
+          <span>Distance</span>
+          <strong>12.4 KM</strong>
+        </div>
+
+        <div class="receipt-row">
+          <span>Pickup</span>
+          <strong>MG Road, Gurgaon</strong>
+        </div>
+
+        <div class="receipt-row">
+          <span>Drop</span>
+          <strong>Cyber Hub, DLF Phase 2</strong>
+        </div>
+
+        <div class="receipt-row">
+          <span>Fare</span>
+          <strong>₹120</strong>
+        </div>
+
+        <div class="receipt-row">
+          <span>GST</span>
+          <strong>₹6</strong>
+        </div>
+
+        <div class="receipt-row total">
+          <span>Total Paid</span>
+          <strong>₹126</strong>
+        </div>
+      </section>
+
+      <div class="receipt-buttons">
+        <button class="gold-btn">Download Receipt</button>
+
+        <button class="light-btn">Share Receipt</button>
+
+        <button
+          class="history-btn"
+          onclick="window.location.href = 'ride-history.html'"
+        >
+          Ride History
+        </button>
+      </div>
+    </main>
+
+    <script src="../js/receipt.js"></script>
+  </body>
+</html>

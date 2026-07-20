@@ -1,0 +1,182 @@
+@keyframes floatCard {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.card1 {
+  animation: floatCard 6s ease-in-out infinite;
+}
+
+.card2 {
+  animation: floatCard 8s ease-in-out infinite;
+}
+
+.card3 {
+  animation: floatCard 7s ease-in-out infinite;
+}
+
+/* HERO FADE */
+
+.hero {
+  animation: heroFade 1.5s ease;
+}
+
+@keyframes heroFade {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.container {
+  animation: pageReveal 1.2s ease;
+}
+
+@keyframes pageReveal {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes carFloat {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* MAP MOVE */
+
+@keyframes mapMove {
+  0% {
+    background-position: center top;
+  }
+
+  100% {
+    background-position: center bottom;
+  }
+}
+/* ========================= */
+/* LIVE CITY TRAFFIC */
+/* ========================= */
+
+/* CAR 1 */
+
+@keyframes trafficMove1 {
+  0% {
+    transform: translate(0px, 0px) rotate(20deg);
+  }
+
+  25% {
+    transform: translate(35px, 16px) rotate(18deg);
+  }
+
+  50% {
+    transform: translate(72px, 38px) rotate(15deg);
+  }
+
+  75% {
+    transform: translate(115px, 62px) rotate(12deg);
+  }
+
+  100% {
+    transform: translate(150px, 86px) rotate(10deg);
+  }
+}
+
+/* CAR 2 */
+
+@keyframes trafficMove2 {
+  0% {
+    transform: translate(0px, 0px) rotate(-22deg);
+  }
+
+  25% {
+    transform: translate(-32px, 14px) rotate(-18deg);
+  }
+
+  50% {
+    transform: translate(-68px, 38px) rotate(-14deg);
+  }
+
+  75% {
+    transform: translate(-102px, 64px) rotate(-10deg);
+  }
+
+  100% {
+    transform: translate(-138px, 88px) rotate(-8deg);
+  }
+}
+
+/* CAR 3 */
+
+@keyframes trafficMove3 {
+  0% {
+    transform: translate(0px, 0px) rotate(12deg);
+  }
+
+  25% {
+    transform: translate(22px, -18px) rotate(10deg);
+  }
+
+  50% {
+    transform: translate(56px, -42px) rotate(8deg);
+  }
+
+  75% {
+    transform: translate(96px, -70px) rotate(5deg);
+  }
+
+  100% {
+    transform: translate(132px, -96px) rotate(2deg);
+  }
+}
+
+/* CAR 4 */
+
+@keyframes trafficMove4 {
+  0% {
+    transform: translate(0px, 0px) rotate(-35deg);
+  }
+
+  25% {
+    transform: translate(-26px, -18px) rotate(-30deg);
+  }
+
+  50% {
+    transform: translate(-54px, -46px) rotate(-24deg);
+  }
+
+  75% {
+    transform: translate(-88px, -74px) rotate(-18deg);
+  }
+
+  100% {
+    transform: translate(-124px, -102px) rotate(-14deg);
+  }
+}

@@ -1,0 +1,118 @@
+c:\Users\zerim\OneD<!-- verification.html -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CatchALiftt Verification</title>
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/verification.css" />
+  </head>
+
+  <body>
+    <!-- BACK BUTTON -->
+
+    <button class="back-btn" onclick="goBack()">←</button>
+
+    <!-- MAIN -->
+
+    <main class="verification-page">
+      <!-- LOGO -->
+
+      <section class="top-section">
+        <h1 class="brand-logo">CatchA<span>Liftt</span></h1>
+
+        <div class="tagline-wrapper">
+          <div class="tagline-line"></div>
+
+          <p class="tagline">VERIFY YOUR ACCOUNT</p>
+
+          <div class="tagline-line"></div>
+        </div>
+      </section>
+
+      <!-- CARD -->
+
+      <section class="verification-card">
+        <div class="card-top">
+          <div class="verify-icon">🔐</div>
+
+          <h2>Phone Verification</h2>
+
+          <p>Enter your mobile number to continue your journey safely.</p>
+        </div>
+
+        <!-- FORM -->
+
+        <form id="verificationForm">
+          <!-- PHONE -->
+
+          <div class="input-group">
+            <label> Mobile Number </label>
+
+            <div class="phone-input">
+              <span class="country-code"> +91 </span>
+
+              <input
+                type="tel"
+                id="phoneNumber"
+                placeholder="Enter mobile number"
+                maxlength="10"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- OTP -->
+
+          <div class="input-group">
+            <label> OTP Verification </label>
+
+            <input
+              type="text"
+              id="otpInput"
+              placeholder="Enter 6-digit OTP"
+              maxlength="6"
+              required
+            />
+          </div>
+
+          <!-- BUTTON -->
+
+          <button type="submit" class="verify-btn">
+            <span> Verify & Continue </span>
+
+            <div class="btn-arrow">→</div>
+          </button>
+        </form>
+
+        <!-- TRUST -->
+
+        <div class="trust-box">
+          <div class="trust-item">🛡 Secure</div>
+
+          <div class="trust-item">🔒 Private</div>
+
+          <div class="trust-item">✅ Verified</div>
+        </div>
+      </section>
+    </main>
+
+    <!-- JS -->
+
+    <script src="../js/verification.js"></script>
+  </body>
+</html>
+rive\Desktop\Cache\TESTING\PAGE IMAGE\page Diagram..png

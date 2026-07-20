@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Ride Completed | CatchALift</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/ride-complete.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  </head>
+
+  <body>
+    <main class="ride-complete-page">
+      <div class="success-circle">✓</div>
+
+      <h1>Ride Completed</h1>
+
+      <p class="subtitle">Every Journey Feels Lighter</p>
+
+      <div class="trip-card">
+        <div class="trip-row">
+          <span>Host</span>
+          <strong>Rahul Sharma</strong>
+        </div>
+
+        <div class="trip-row">
+          <span>Vehicle</span>
+          <strong>Toyota Innova</strong>
+        </div>
+
+        <div class="trip-row">
+          <span>Distance</span>
+          <strong>12.4 KM</strong>
+        </div>
+
+        <div class="trip-row">
+          <span>Trip Fare</span>
+          <strong>₹120</strong>
+        </div>
+      </div>
+
+      <div class="rating-section">
+        <h2>Rate Your Host</h2>
+
+        <div class="stars">
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+        </div>
+      </div>
+
+      <div class="reward-card">
+        <h3>🎁 Reward Earned</h3>
+
+        <p>+50 CatchPoints Added</p>
+      </div>
+
+      <div class="button-group">
+        <button
+          class="submit-review-btn"
+          onclick="window.location.href = 'review.html'"
+        >
+          Submit Review
+        </button>
+
+        <button class="secondary-btn">Book Another Ride</button>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="../js/ride-complete.js"></script>
+  </body>
+</html>

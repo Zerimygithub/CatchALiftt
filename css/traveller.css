@@ -1,0 +1,381 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #f4f1eb;
+  overflow: hidden;
+}
+
+/* LAYOUT */
+
+.app-layout {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+/* LEFT PANEL */
+
+.left-panel {
+  width: 38%;
+  height: 100vh;
+  background: #f5f1ea;
+  padding: 22px;
+  overflow: auto;
+  border-right: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+/* TOP BAR */
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.menu-btn,
+.notify-btn {
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 18px;
+  background: white;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.top-bar h1 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #182033;
+}
+
+.top-bar span {
+  color: #d4ab32;
+}
+
+/* BOOKING CARD */
+
+.booking-card {
+  background: white;
+  border-radius: 28px;
+  padding: 22px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.tabs button {
+  flex: 1;
+  height: 54px;
+  border: none;
+  border-radius: 18px;
+  background: #f1ede6;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.active-tab {
+  background: #182033 !important;
+  color: white;
+}
+
+/* FORM */
+
+.booking-card label {
+  display: block;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  color: #8f8b83;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.booking-card input {
+  width: 100%;
+  height: 62px;
+  border: none;
+  outline: none;
+  border-radius: 18px;
+  padding: 0 20px;
+  background: #f5f1ea;
+  font-size: 17px;
+  color: #182033;
+}
+
+/* DATE TIME */
+
+.datetime-wrapper {
+  display: flex;
+  gap: 12px;
+}
+
+.datetime-wrapper input {
+  flex: 1;
+}
+
+/* BUTTON */
+
+.search-btn {
+  width: 100%;
+  height: 64px;
+  border: none;
+  border-radius: 20px;
+  background: #d4ab32;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 24px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(212, 171, 50, 0.35);
+}
+
+/* AI CARD */
+
+.ride-suggestion {
+  margin-top: 24px;
+  background: white;
+  border-radius: 28px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.ride-suggestion h2 {
+  color: #182033;
+  margin-bottom: 8px;
+}
+
+.ride-suggestion p {
+  color: #8b867e;
+  margin-bottom: 24px;
+}
+
+.ride-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.ride-car {
+  width: 90px;
+}
+
+.ride-card h3 {
+  font-size: 32px;
+  color: #182033;
+  margin-bottom: 8px;
+}
+
+.ride-card h4 {
+  color: #5f5a53;
+  margin-bottom: 10px;
+}
+
+.ride-meta {
+  display: flex;
+  gap: 18px;
+  color: #5f5a53;
+  font-size: 14px;
+}
+
+/* MAP */
+
+.map-section {
+  width: 62%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: #ebe7df;
+}
+
+/* MAP IMAGE */
+
+.map-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.92;
+}
+
+/* ROUTE */
+
+.route-line {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border: 4px solid transparent;
+  border-top: 4px solid #ff6b6b;
+  border-right: 4px solid #ff6b6b;
+  border-radius: 50%;
+  right: 120px;
+  bottom: 220px;
+  transform: rotate(25deg);
+}
+
+/* USER PIN */
+
+.user-pin {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: #2f7cff;
+  border-radius: 50%;
+  left: 48%;
+  top: 50%;
+  box-shadow: 0 0 0 14px rgba(47, 124, 255, 0.18);
+}
+
+/* DESTINATION */
+
+.destination-pin {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  background: #ff5b5b;
+  border-radius: 50%;
+  right: 210px;
+  bottom: 140px;
+}
+
+/* CARS */
+
+.moving-car {
+  position: absolute;
+  width: 48px;
+  z-index: 10;
+  filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.25));
+}
+
+/* CAR POSITIONS */
+
+.car1 {
+  top: 34%;
+  right: 170px;
+  animation: carMove1 8s linear infinite;
+}
+
+.car2 {
+  top: 48%;
+  right: 120px;
+  animation: carMove2 7s linear infinite;
+}
+
+.car3 {
+  bottom: 34%;
+  right: 220px;
+  animation: carMove3 9s linear infinite;
+}
+
+.car4 {
+  bottom: 22%;
+  right: 120px;
+  animation: carMove4 6s linear infinite;
+}
+
+/* ANIMATIONS */
+
+@keyframes carMove1 {
+  0% {
+    transform: translateX(0px) rotate(-18deg);
+  }
+
+  50% {
+    transform: translateX(-30px) translateY(15px) rotate(-18deg);
+  }
+
+  100% {
+    transform: translateX(0px) rotate(-18deg);
+  }
+}
+
+@keyframes carMove2 {
+  0% {
+    transform: translateY(0px) rotate(22deg);
+  }
+
+  50% {
+    transform: translateY(20px) rotate(22deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(22deg);
+  }
+}
+
+@keyframes carMove3 {
+  0% {
+    transform: translateX(0px) rotate(12deg);
+  }
+
+  50% {
+    transform: translateX(35px) rotate(12deg);
+  }
+
+  100% {
+    transform: translateX(0px) rotate(12deg);
+  }
+}
+
+@keyframes carMove4 {
+  0% {
+    transform: translateY(0px) rotate(-22deg);
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(-22deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(-22deg);
+  }
+}
+
+/* MAP CARD */
+
+.map-card {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 24px;
+  width: 86%;
+  background: white;
+  border-radius: 28px;
+  padding: 26px 34px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.map-card span {
+  color: #8c877f;
+  font-size: 14px;
+}
+
+.map-card h3 {
+  margin-top: 6px;
+  color: #182033;
+  font-size: 32px;
+}
+
+/* SCROLL */
+
+.left-panel::-webkit-scrollbar {
+  width: 0;
+}

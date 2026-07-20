@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CatchALiftt Navigation V2</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/navigation-v2.css" />
+  </head>
+
+  <body>
+    <div class="map-container">
+      <!-- MAP -->
+
+      <div id="map"></div>
+
+      <!-- TOP CARD -->
+
+      <div class="navigation-card">
+        <div class="nav-top">
+          <div class="eta-time">12 MIN</div>
+
+          <div class="live-status">LIVE</div>
+        </div>
+
+        <div class="instruction-row">
+          <div class="direction-icon">↑</div>
+
+          <div>
+            <div class="current-instruction">Continue Straight</div>
+
+            <div class="instruction-distance">2.4 KM</div>
+          </div>
+        </div>
+
+        <div class="next-turn">Next Turn Left After 500m</div>
+      </div>
+
+      <!-- VEHICLE -->
+
+      <div id="vehicle-marker">
+        <img src="../assets/images/car.svg" alt="Vehicle" />
+      </div>
+
+      <!-- BOTTOM BAR -->
+
+      <div class="bottom-bar">
+        <div class="bottom-item">
+          <div class="bottom-value">12 MIN</div>
+
+          <div class="bottom-label">ETA</div>
+        </div>
+
+        <div class="bottom-item">
+          <div class="bottom-value">8.6 KM</div>
+
+          <div class="bottom-label">LEFT</div>
+        </div>
+
+        <button class="share-btn">Share</button>
+
+        <button class="sos-btn">SOS</button>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+
+    <script src="../js/navigation-v2.js"></script>
+  </body>
+</html>

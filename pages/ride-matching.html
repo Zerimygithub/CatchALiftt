@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- ==========================================================
+         META
+    ========================================================== -->
+
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="CatchALiftt Ride Matching" />
+
+    <meta name="theme-color" content="#C89B3C" />
+
+    <title>Ride Matching | CatchALiftt</title>
+
+    <!-- ==========================================================
+         GOOGLE FONT
+    ========================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ==========================================================
+         FONT AWESOME
+    ========================================================== -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <!-- ==========================================================
+         GLOBAL CSS
+    ========================================================== -->
+
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <link rel="stylesheet" href="../css/animations.css" />
+
+    <link rel="stylesheet" href="../css/responsive.css" />
+
+    <link rel="stylesheet" href="../css/ride-matching.css" />
+  </head>
+
+  <body>
+    <div class="ride-matching-page">
+      <div class="page-container">
+        <!-- ==========================================================
+             TOP NAVIGATION
+        ========================================================== -->
+
+        <header class="top-navbar">
+          <div class="nav-left">
+            <button class="back-btn" id="backBtn">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+
+            <img
+              src="../assets/images/logo.png"
+              alt="CatchALiftt"
+              class="brand-logo"
+            />
+          </div>
+
+          <div class="nav-center">
+            <h1 class="page-title">Choose Your Host</h1>
+
+            <p class="page-subtitle">
+              AI has already ranked the best hosts for your journey.
+            </p>
+          </div>
+
+          <div class="nav-right">
+            <button class="notification-btn" id="notificationBtn">
+              <i class="fa-regular fa-bell"></i>
+
+              <span class="notification-dot"></span>
+            </button>
+
+            <button class="traveller-profile" id="travellerProfileBtn">
+              <div class="profile-symbol" id="travellerSymbol">💼</div>
+
+              <div class="traveller-info">
+                <span class="traveller-label"> Traveller </span>
+
+                <span class="traveller-name" id="travellerName"> Rahul </span>
+              </div>
+            </button>
+          </div>
+        </header>
+        <!-- ==========================================================
+             JOURNEY SUMMARY
+        ========================================================== -->
+
+        <section class="journey-summary">
+          <div class="journey-item">
+            <span class="journey-label"> Pickup </span>
+
+            <h3 class="pickup-location" id="pickupLocation">Koramangala</h3>
+          </div>
+
+          <div class="journey-arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+
+          <div class="journey-item">
+            <span class="journey-label"> Destination </span>
+
+            <h3 class="destination-location" id="destinationLocation">
+              Manyata Tech Park
+            </h3>
+          </div>
+
+          <div class="journey-item">
+            <span class="journey-label"> Date </span>
+
+            <h3 class="journey-date" id="journeyDate">Tomorrow</h3>
+          </div>
+
+          <div class="journey-item">
+            <span class="journey-label"> Departure </span>
+
+            <h3 class="departure-time" id="departureTime">08:30 AM</h3>
+          </div>
+
+          <button class="edit-search-btn" id="editSearchBtn">
+            <i class="fa-solid fa-pen"></i>
+
+            Edit Search
+          </button>
+        </section>
+        <!-- ==========================================================
+             AI RECOMMENDATION
+        ========================================================== -->
+
+        <section class="ai-recommendation">
+          <div class="ai-banner">
+            <div class="ai-banner-left">
+              <div class="ai-icon">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+            </div>
+
+            <div class="ai-banner-center">
+              <span class="ai-title"> AI Recommendation </span>
+
+              <h2 class="ai-heading">
+                AI ranked the best hosts for your journey
+              </h2>
+
+              <p class="ai-description">
+                Ranking is based on route similarity, punctuality, reliability
+                and minimum detour. Every recommended host can reach the
+                destination on time.
+              </p>
+            </div>
+
+            <div class="ai-banner-right">
+              <div class="ai-rank-badge">TOP MATCH</div>
+            </div>
+          </div>
+        </section>
+        <!-- ==========================================================
+             AI STATISTICS
+        ========================================================== -->
+
+        <section class="ai-metrics">
+          <div class="metric-card" id="routeMatchCard">
+            <span class="metric-label"> Route Match </span>
+
+            <h3 class="metric-value" id="routeMatch">98%</h3>
+          </div>
+
+          <div class="metric-card" id="punctualityCard">
+            <span class="metric-label"> Punctuality </span>
+
+            <h3 class="metric-value" id="punctualityScore">99%</h3>
+          </div>
+
+          <div class="metric-card" id="reliabilityCard">
+            <span class="metric-label"> Reliability </span>
+
+            <h3 class="metric-value" id="reliabilityScore">97%</h3>
+          </div>
+
+          <div class="metric-card" id="detourCard">
+            <span class="metric-label"> Host Detour </span>
+
+            <h3 class="metric-value" id="detourScore">0.2 KM</h3>
+          </div>
+        </section>
+        <!-- ==========================================================
+             HERO HOST CARD
+        ========================================================== -->
+
+        <section class="hero-host-card host-card" id="heroHostCard">
+          <!-- ===========================
+                 LEFT
+            ============================ -->
+
+          <div class="host-left">
+            <div class="profile-symbol" id="heroProfileSymbol">💼</div>
+          </div>
+
+          <!-- ===========================
+                 CENTER
+            ============================ -->
+
+          <div class="host-center">
+            <!-- Host Name -->
+
+            <div class="host-title">
+              <h2 class="host-name" id="heroHostName">
+                Amit Verma
+
+                <i class="fa-solid fa-circle-check verified-icon"></i>
+              </h2>
+
+              <div class="community-host" id="heroCommunityBadge">
+                🟣 Elite Community Host
+              </div>
+            </div>
+
+            <!-- Vehicle -->
+
+            <p class="vehicle-name" id="heroVehicle">Hyundai Verna • Silver</p>
+
+            <!-- Preferences -->
+
+            <div class="host-preferences">
+              <span class="feature-tag"> ❄ AC </span>
+
+              <span class="feature-tag silent-tag"> 🤫 Silent Ride </span>
+
+              <span class="feature-tag"> 🎵 Music </span>
+
+              <span class="feature-tag"> 🔌 Charging </span>
+            </div>
+
+            <!-- Route Details -->
+
+            <div class="route-summary">
+              <div>
+                <small> Pickup </small>
+
+                <strong id="heroPickupLocation">
+                  Koramangala Sony Signal
+                </strong>
+              </div>
+
+              <div>
+                <small> Pickup Time </small>
+
+                <strong class="pickup-time" id="heroPickupTime">
+                  08:37 AM
+                </strong>
+              </div>
+
+              <div>
+                <small> Arrival </small>
+
+                <strong id="heroArrivalTime"> 09:42 AM </strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===========================
+                 RIGHT
+            ============================ -->
+
+          <div class="host-right">
+            <div class="host-price" id="heroFare">₹100</div>
+
+            <div class="seat-count" id="heroSeats">2 Seats Available</div>
+
+            <button class="book-ride-btn" id="bookRideBtn">Book Ride</button>
+
+            <button class="view-details-btn" id="viewDetailsBtn">
+              View Details
+            </button>
+          </div>
+        </section>
+        <!-- ==========================================================
+             HERO HOST TRUST METRICS
+        ========================================================== -->
+
+        <section class="hero-host-metrics" id="heroHostMetrics">
+          <div class="metric-box">
+            <span class="metric-title"> Punctuality </span>
+
+            <h3 id="heroPunctuality">99%</h3>
+          </div>
+
+          <div class="metric-box">
+            <span class="metric-title"> Distance Shared </span>
+
+            <h3 id="heroDistance">1,240 KM</h3>
+          </div>
+
+          <div class="metric-box">
+            <span class="metric-title"> Cancellation </span>
+
+            <h3 id="heroCancellation">0</h3>
+
+            <small> Last 90 Days </small>
+          </div>
+
+          <div class="metric-box">
+            <span class="metric-title"> Member Since </span>
+
+            <h3 id="heroMemberSince">Jan 2025</h3>
+          </div>
+        </section>
+        <!-- ==========================================================
+             HOST CARD #2
+        ========================================================== -->
+
+        <section class="host-card" id="hostCard2">
+          <!-- LEFT -->
+
+          <div class="host-card-left">
+            <div class="profile-symbol" id="host2Profile">🌸</div>
+          </div>
+
+          <!-- CENTER -->
+
+          <div class="host-card-center">
+            <div class="host-title">
+              <h3 class="host-name" id="host2Name">
+                Priya Sharma
+
+                <i class="fa-solid fa-circle-check verified-icon"></i>
+              </h3>
+
+              <div class="community-host" id="host2Badge">
+                🔵 Preferred Community Host
+              </div>
+            </div>
+
+            <p class="vehicle-name" id="host2Vehicle">Honda City • White</p>
+
+            <div class="host-info">
+              <span>
+                📍
+                <strong>Pickup</strong>
+
+                <span id="host2Pickup"> Koramangala Forum </span>
+              </span>
+
+              <span>
+                ⏰
+                <strong>Time</strong>
+
+                <span class="pickup-time" id="host2Time"> 08:35 AM </span>
+              </span>
+
+              <span>
+                🚗
+                <strong>Detour</strong>
+
+                <span id="host2Detour"> 0.4 KM </span>
+              </span>
+            </div>
+          </div>
+
+          <!-- RIGHT -->
+
+          <div class="host-card-right">
+            <div class="host-price" id="host2Fare">₹100</div>
+
+            <div class="seat-count" id="host2Seats">2 Seats Available</div>
+
+            <button class="book-ride-btn" id="bookRide2">Book Ride</button>
+          </div>
+        </section>
+        <!-- ==========================================================
+             HOST CARD #3
+        ========================================================== -->
+
+        <section class="host-card" id="hostCard3">
+          <!-- LEFT -->
+
+          <div class="host-card-left">
+            <div class="profile-symbol" id="host3Profile">🧭</div>
+          </div>
+
+          <!-- CENTER -->
+
+          <div class="host-card-center">
+            <div class="host-title">
+              <h3 class="host-name" id="host3Name">
+                Karthik Rao
+
+                <i class="fa-solid fa-circle-check verified-icon"></i>
+              </h3>
+
+              <div class="community-host" id="host3Badge">
+                🟢 Trusted Community Host
+              </div>
+            </div>
+
+            <p class="vehicle-name" id="host3Vehicle">Hyundai i20 • Blue</p>
+
+            <div class="host-info">
+              <span>
+                📍
+                <strong>Pickup</strong>
+
+                <span id="host3Pickup"> Koramangala BDA Complex </span>
+              </span>
+
+              <span>
+                ⏰
+                <strong>Time</strong>
+
+                <span class="pickup-time" id="host3Time"> 08:40 AM </span>
+              </span>
+
+              <span>
+                🚗
+                <strong>Detour</strong>
+
+                <span id="host3Detour"> 0.5 KM </span>
+              </span>
+            </div>
+          </div>
+
+          <!-- RIGHT -->
+
+          <div class="host-card-right">
+            <div class="host-price" id="host3Fare">₹100</div>
+
+            <div class="seat-count" id="host3Seats">1 Seat Available</div>
+
+            <button class="book-ride-btn" id="bookRide3">Book Ride</button>
+          </div>
+        </section>
+        <!-- ==========================================================
+             SHOW MORE HOSTS
+        ========================================================== -->
+
+        <section class="show-more-section" id="showMoreSection">
+          <button class="show-more-btn" id="showMoreBtn">
+            <i class="fa-solid fa-chevron-down"></i>
+
+            Show More Hosts
+          </button>
+        </section>
+
+        <!-- ==========================================================
+             PAGE SPACER
+        ========================================================== -->
+
+        <div class="page-bottom-spacing"></div>
+      </div>
+    </div>
+    <!-- ==========================================================
+     JAVASCRIPT
+========================================================== -->
+
+    <script src="../js/storage.js"></script>
+
+    <script src="../js/session.js"></script>
+
+    <script src="../js/ride-matching.js"></script>
+  </body>
+</html>

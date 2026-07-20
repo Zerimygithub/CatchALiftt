@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CatchALiftt</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- MENU BUTTON -->
+
+    <button class="menu-btn" id="menuBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- SIDE MENU -->
+
+    <div class="side-menu" id="sideMenu">
+      <div class="menu-header">
+        <h2>CatchA<span>Liftt</span></h2>
+
+        <button class="close-btn" id="closeBtn">×</button>
+      </div>
+
+      <div class="menu-profile">
+        <div class="profile-avatar">J</div>
+
+        <div class="profile-info">
+          <p class="greeting">Good Evening</p>
+
+          <h3>Jagadananda</h3>
+        </div>
+      </div>
+
+      <div class="menu-divider"></div>
+
+      <div class="menu-links">
+        <a href="#"> 🏠 Home </a>
+
+        <a href="pages/traveller-booking.html"> 🚶 Traveller </a>
+
+        <a href="pages/host-booking.html"> 🚗 Host </a>
+
+        <a href="#"> 💳 Wallet </a>
+
+        <a href="#"> 🕒 Ride History </a>
+
+        <a href="#"> 🎁 Rewards </a>
+
+        <a href="#"> 🎧 Support </a>
+
+        <a href="#"> ⚙ Settings </a>
+      </div>
+
+      <div class="menu-divider"></div>
+
+      <div class="menu-footer">Designed for Introverts.</div>
+    </div>
+
+    <!-- OVERLAY -->
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- SPLASH SCREEN -->
+
+    <div id="splash-screen">
+      <button id="skipBtn" class="skip-btn">SKIP →</button>
+
+      <video id="splash-video" autoplay muted playsinline>
+        <source src="assets/videos/Splash.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <!-- MAIN CONTENT -->
+
+    <div id="main-content">
+      <main class="hero-section">
+        <!-- LOGO -->
+
+        <div class="logo-section">
+          <h1 class="logo">CatchA<span>Liftt</span></h1>
+
+          <div class="tagline-wrapper">
+            <div class="line"></div>
+
+            <p class="tagline">Designed for Introverts.</p>
+
+            <div class="line"></div>
+          </div>
+        </div>
+
+        <!-- CAR -->
+
+        <div class="car-wrapper">
+          <img src="assets/images/car.png" alt="Car" class="hero-car" />
+        </div>
+
+        <!-- CURVE -->
+
+        <div class="curve-line"></div>
+
+        <!-- TITLE -->
+
+        <div class="choice-title">
+          <div class="small-line"></div>
+
+          <h3>I want to</h3>
+
+          <div class="small-line"></div>
+        </div>
+
+        <!-- CTA SECTION -->
+
+        <section class="cta-section">
+          <!-- TRAVELLER -->
+
+          <a
+            href="pages/traveller-booking.html"
+            class="choice-card traveller-card"
+          >
+            <div class="card-glow"></div>
+
+            <div class="card-icon">🚶</div>
+
+            <div class="card-content">
+              <p class="small-text">CONTINUE AS</p>
+
+              <h2>Traveller</h2>
+            </div>
+
+            <div class="arrow-btn">→</div>
+          </a>
+
+          <!-- OR -->
+
+          <div class="or-circle">or</div>
+
+          <!-- HOST -->
+
+          <a href="pages/host-booking.html" class="choice-card host-card">
+            <div class="card-glow"></div>
+            <div class="card-icon">🚗</div>
+
+            <div class="card-content">
+              <p class="small-text">BECOME A</p>
+
+              <h2>Host</h2>
+            </div>
+
+            <div class="arrow-btn">→</div>
+          </a>
+        </section>
+
+        <!-- TRUST SECTION -->
+
+        <section class="trust-section">
+          <div class="trust-box">
+            <div class="trust-icon">🛡️</div>
+
+            <div>
+              <h4>Safe & Secure</h4>
+
+              <p>Verified users only</p>
+            </div>
+          </div>
+
+          <div class="trust-box">
+            <div class="trust-icon">🔒</div>
+
+            <div>
+              <h4>Privacy First</h4>
+
+              <p>Your data is protected</p>
+            </div>
+          </div>
+
+          <div class="trust-box">
+            <div class="trust-icon">⭐</div>
+
+            <div>
+              <h4>Trusted Community</h4>
+
+              <p>Travel with confidence</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+  </body>
+</html>

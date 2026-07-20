@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Live Pickup | CatchALift</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+
+    <link rel="stylesheet" href="../css/live-pickup.css" />
+  </head>
+
+  <body>
+    <div class="pickup-page">
+      <!-- ===============================
+            LEAFLET MAP
+    ================================ -->
+
+      <div class="map-wrapper">
+        <div id="liveMap"></div>
+
+        <div class="map-overlay"></div>
+      </div>
+
+      <!-- ===============================
+            TOP STATUS
+    ================================ -->
+
+      <header class="top-bar">
+        <div class="live-status">
+          <span class="pulse-dot"></span>
+
+          <span>Live Pickup</span>
+        </div>
+
+        <div class="eta-pill" id="etaText">4 min away</div>
+      </header>
+
+      <!-- ===============================
+            FLOATING BUTTONS
+    ================================ -->
+
+      <div class="floating-buttons">
+        <button id="locationBtn" title="Current Location">📍</button>
+
+        <button id="compassBtn" title="Compass">🧭</button>
+      </div>
+
+      <!-- LIVE STATUS -->
+
+      <!-- ===============================
+            BOTTOM SHEET
+    ================================ -->
+
+      <section class="bottom-sheet">
+        <div class="drag-handle"></div>
+
+        <!-- ==========================
+                QUICK STATS
+        =========================== -->
+
+        <div class="ride-summary">
+          <div class="summary-card">
+            <span>ETA</span>
+
+            <h3 id="arrivalTime">4 min</h3>
+          </div>
+
+          <div class="summary-card">
+            <span>Distance</span>
+
+            <h3 id="distanceText">2.4 km</h3>
+          </div>
+
+          <div class="summary-card">
+            <span>Fare</span>
+
+            <h3 id="rideFare">₹100</h3>
+          </div>
+        </div>
+
+        <!-- ==========================
+                PICKUP / DESTINATION
+        =========================== -->
+
+        <div class="route-card">
+          <div class="route-item">
+            <div class="route-dot pickup"></div>
+
+            <div>
+              <small> Pickup </small>
+
+              <h4 id="pickupLocation">Loading...</h4>
+            </div>
+          </div>
+
+          <div class="route-line"></div>
+
+          <div class="route-item">
+            <div class="route-dot drop"></div>
+
+            <div>
+              <small> Destination </small>
+
+              <h4 id="dropLocation">Loading...</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==========================
+                RIDE STATUS
+        =========================== -->
+
+        <div class="ride-progress">
+          <div class="step active" id="step1">
+            <div class="dot"></div>
+
+            <span> Accepted </span>
+          </div>
+
+          <div class="progress-line"></div>
+
+          <div class="step" id="step2">
+            <div class="dot"></div>
+
+            <span> En Route </span>
+          </div>
+
+          <div class="progress-line"></div>
+
+          <div class="step" id="step3">
+            <div class="dot"></div>
+
+            <span> Arriving </span>
+          </div>
+
+          <div class="progress-line"></div>
+
+          <div class="step" id="step4">
+            <div class="dot"></div>
+
+            <span> Pickup </span>
+          </div>
+        </div>
+        <!-- ===============================
+            HOST CARD
+    ================================ -->
+
+        <section class="host-card">
+          <div class="host-left">
+            <div class="driver-avatar" id="driverAvatar">AV</div>
+
+            <div class="host-info">
+              <h2 id="driverName">Amit Verma</h2>
+
+              <p id="driverVehicle">Hyundai Verna • Silver</p>
+
+              <div class="host-tags">
+                <span class="verified"> ✓ Verified Host </span>
+
+                <span> ⭐ 4.9 </span>
+
+                <span> 1200+ Trips </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="host-actions">
+            <button id="callHost">📞</button>
+
+            <button id="chatHost">💬</button>
+          </div>
+          <hr class="host-divider" />
+
+          <div class="host-status">
+            <h3 id="tripStatusTitle">Host is on the way</h3>
+
+            <p id="tripStatusSubtitle">2.4 km away • ETA 4 min</p>
+          </div>
+        </section>
+        <!-- ==========================
+                PICKUP OTP
+        =========================== -->
+
+        <div class="otp-card">
+          <p class="otp-title">Pickup OTP</p>
+
+          <h1 class="otp-number">4832</h1>
+
+          <p class="otp-note">Share this OTP only after your host arrives.</p>
+        </div>
+
+        <!-- ==========================
+                ACTION BUTTONS
+        =========================== -->
+
+        <div class="action-buttons">
+          <button class="outline-btn">Cancel Ride</button>
+
+          <button class="primary-btn">Track Host</button>
+        </div>
+      </section>
+
+      <!-- ===============================
+            TOAST NOTIFICATIONS
+    ================================ -->
+
+      <div id="toastContainer"></div>
+
+      <!-- ===============================
+            LOADING OVERLAY
+    ================================ -->
+
+      <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader"></div>
+
+        <p>Connecting to your host...</p>
+      </div>
+
+      <!-- ===============================
+            MAP LEGEND
+            (Hidden for future)
+    ================================ -->
+
+      <div class="map-legend" style="display: none">
+        <div>
+          <span class="legend-dot pickup"></span>
+
+          Pickup
+        </div>
+
+        <div>
+          <span class="legend-dot drop"></span>
+
+          Destination
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================
+        JAVASCRIPT
+======================================= -->
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css"
+    />
+
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+    <script src="../js/live-pickup.js"></script>
+  </body>
+</html>

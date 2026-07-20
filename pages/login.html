@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CatchALift | Login</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Login CSS -->
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+
+  <body>
+    <div class="login-page">
+      <!-- Background Decoration -->
+
+      <div class="bg-circle bg-circle-1"></div>
+      <div class="bg-circle bg-circle-2"></div>
+
+      <!-- Login Card -->
+
+      <div class="login-card">
+        <!-- Brand -->
+
+        <div class="brand">
+          <!-- Update logo path if needed -->
+
+          <img
+            src="../assets/images/logo.png"
+            alt="CatchALift Logo"
+            class="brand-logo"
+          />
+
+          <h1 class="brand-title">CatchA<span>Liftt</span></h1>
+
+          <p class="brand-tagline">Designed for Introverts.</p>
+          <div class="brand-divider"></div>
+        </div>
+
+        <!-- Heading -->
+
+        <div class="heading">
+          <h2>Welcome Back</h2>
+
+          <p>Continue your daily commute.</p>
+        </div>
+
+        <!-- Login Form -->
+
+        <form id="loginForm" novalidate>
+          <label> Mobile Number </label>
+
+          <div class="phone-container">
+            <select id="countryCode">
+              <option value="+91">🇮🇳 +91</option>
+            </select>
+
+            <input
+              type="tel"
+              id="phoneNumber"
+              maxlength="10"
+              autocomplete="off"
+              placeholder="Enter your mobile number"
+            />
+          </div>
+
+          <small id="errorMessage"></small>
+
+          <button type="submit" id="continueBtn">Continue →</button>
+        </form>
+
+        <!-- Privacy -->
+
+        <div class="privacy">
+          🔒 Your phone number remains completely private. It is only used for
+          secure login.
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+
+    <script src="../js/storage.js"></script>
+
+    <script src="../js/session.js"></script>
+
+    <script src="../js/login.js"></script>
+  </body>
+</html>

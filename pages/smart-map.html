@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Smart Map | CatchALift</title>
+
+    <link rel="stylesheet" href="../css/smart-map.css" />
+  </head>
+
+  <body>
+    <div class="map-page">
+      <div class="map-container">
+        <div class="map-overlay"></div>
+
+        <!-- Top Bar -->
+
+        <div class="top-bar">
+          <div class="logo">🚕 CatchALift</div>
+
+          <div class="live-pill">🟢 Live Tracking</div>
+        </div>
+
+        <!-- ETA Card -->
+
+        <div class="eta-card">
+          <div class="eta-left">
+            <h2>3 min</h2>
+            <p>Host arriving</p>
+          </div>
+
+          <div class="eta-right">⭐ 4.9</div>
+        </div>
+
+        <!-- Driver Card -->
+
+        <div class="driver-card">
+          <div class="driver-left">
+            <div class="driver-avatar">JS</div>
+
+            <div>
+              <h3>Jagadananda Sahu</h3>
+
+              <p>Silver Honda City</p>
+            </div>
+          </div>
+
+          <div class="driver-actions">
+            <button>📞</button>
+
+            <button>💬</button>
+          </div>
+        </div>
+
+        <!-- Route Card -->
+
+        <div class="route-card">
+          <div class="location">
+            <div class="dot pickup"></div>
+
+            <div>
+              <h4>Pickup</h4>
+              <p>Bluestone Store</p>
+            </div>
+          </div>
+
+          <div class="route-line"></div>
+
+          <div class="location">
+            <div class="dot drop"></div>
+
+            <div>
+              <h4>Drop</h4>
+              <p>Airport Terminal 2</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Panel -->
+
+        <div class="bottom-panel">
+          <div class="trip-stats">
+            <div class="stat">
+              <span>Distance</span>
+              <h3>12.5 km</h3>
+            </div>
+
+            <div class="stat">
+              <span>Fare</span>
+              <h3>₹420</h3>
+            </div>
+
+            <div class="stat">
+              <span>Saved</span>
+              <h3>₹80</h3>
+            </div>
+          </div>
+
+          <button class="track-btn">Track Ride Live</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/smart-map.js"></script>
+  </body>
+</html>

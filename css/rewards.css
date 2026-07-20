@@ -1,0 +1,129 @@
+.rewards-page {
+  min-height: 100vh;
+  background: #f7f4ee;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.hero-card,
+.balance-card,
+.progress-card,
+.referral-card {
+  width: 100%;
+  max-width: 700px;
+  background: white;
+  border-radius: 24px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.reward-icon {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.hero-card h1 {
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.points-earned {
+  color: #d8ae2e;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.tagline {
+  color: #64748b;
+}
+
+.wallet-balance {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-top: 20px;
+}
+
+.member-badge {
+  margin-top: 15px;
+  color: #d8ae2e;
+  font-weight: 600;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 14px;
+  background: #ececec;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  width: 0;
+  height: 100%;
+  background: #d8ae2e;
+  border-radius: 50px;
+  animation: fillBar 2s forwards;
+}
+
+@keyframes fillBar {
+  to {
+    width: 80%;
+  }
+}
+
+.referral-card {
+  background: linear-gradient(135deg, #d8ae2e, #f0d77a);
+  color: white;
+}
+
+.action-buttons {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.gold-btn {
+  border: none;
+  padding: 18px;
+  border-radius: 16px;
+  background: #d8ae2e;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.light-btn {
+  border: none;
+  padding: 18px;
+  border-radius: 16px;
+  background: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.hero-card {
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px rgba(216, 174, 46, 0.2);
+  }
+
+  to {
+    box-shadow: 0 0 40px rgba(216, 174, 46, 0.4);
+  }
+}

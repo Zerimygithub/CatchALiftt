@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CatchALiftt Traveller</title>
+
+    <!-- GOOGLE FONT -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="../css/traveller.css" />
+  </head>
+
+  <body>
+    <main class="app-layout">
+      <!-- LEFT PANEL -->
+
+      <section class="left-panel">
+        <!-- TOP -->
+
+        <div class="top-bar">
+          <button class="menu-btn">☰</button>
+
+          <h1>CatchA<span>Liftt</span></h1>
+
+          <button class="notify-btn">🔔</button>
+        </div>
+
+        <!-- CARD -->
+
+        <div class="booking-card">
+          <!-- TABS -->
+
+          <div class="tabs">
+            <button class="active-tab">🧍 Traveller</button>
+
+            <button onclick="window.location.href = 'host-booking.html'">
+              🚘 Host
+            </button>
+          </div>
+
+          <!-- PICKUP -->
+
+          <label> Pickup Location </label>
+
+          <input type="text" id="pickup" placeholder="Enter pickup point" />
+
+          <!-- SCHEDULE -->
+
+          <label> Schedule Ride </label>
+
+          <div class="datetime-wrapper">
+            <input type="date" id="rideDate" />
+
+            <input type="time" id="rideTime" />
+          </div>
+
+          <!-- DROP -->
+
+          <label> Drop Location </label>
+
+          <input type="text" id="drop" placeholder="Where are you going?" />
+
+          <!-- BUTTON -->
+
+          
+            Search Rides →
+          <button
+class="search-btn"
+onclick="window.location.href='tracking.html'">
+
+Search Rides →
+
+</button>
+
+        <!-- AI CARD -->
+
+        <div class="ride-suggestion">
+          <h2>✨ AI Suggested Rides</h2>
+
+          <p>Best matches for your journey</p>
+
+          <div class="ride-card">
+            <img src="../assets/images/car3.png" class="ride-car" />
+
+            <div>
+              <h3 id="ridePrice">₹--</h3>
+
+              <h4 id="rideRoute">Waiting for route...</h4>
+
+              <div class="ride-meta">
+                <span id="rideTimeText"> -- mins </span>
+
+                <span> 1 Seat </span>
+
+                <span> ⭐ 4.9 </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAP -->
+
+      <section class="map-section">
+        <!-- MAP -->
+
+        <img src="../assets/images/map.jpg" class="map-image" />
+
+        <!-- ROUTE -->
+
+        <div class="route-line"></div>
+
+        <!-- USER -->
+
+        <div class="user-pin"></div>
+
+        <!-- DESTINATION -->
+
+        <div class="destination-pin"></div>
+
+        <!-- CARS -->
+
+        <img src="../assets/images/car1.png" class="moving-car car1" />
+
+        <img src="../assets/images/car2.png" class="moving-car car2" />
+
+        <img src="../assets/images/car3.png" class="moving-car car3" />
+
+        <img src="../assets/images/car4.png" class="moving-car car4" />
+
+        <!-- MAP CARD -->
+
+        <div class="map-card">
+          <div>
+            <span> Fare </span>
+
+            <h3 id="mapFare">₹--</h3>
+          </div>
+
+          <div>
+            <span> Distance </span>
+
+            <h3 id="mapDistance">--</h3>
+          </div>
+
+          <div>
+            <span> ETA </span>
+
+            <h3 id="mapEta">--</h3>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- SCRIPT -->
+
+    <script>
+      /* DATE LOCK */
+
+      const now = new Date();
+
+      const year = now.getFullYear();
+
+      const month = String(now.getMonth() + 1).padStart(2, "0");
+
+      const day = String(now.getDate()).padStart(2, "0");
+
+      const today = `${year}-${month}-${day}`;
+
+      const rideDate = document.getElementById("rideDate");
+
+      rideDate.min = today;
+
+      rideDate.value = today;
+
+      /* TIME */
+
+      const rideTime = document.getElementById("rideTime");
+
+      let hours = String(now.getHours()).padStart(2, "0");
+
+      let minutes = String(now.getMinutes()).padStart(2, "0");
+
+      rideTime.value = `${hours}:${minutes}`;
+
+      /* SEARCH */
+
+      function searchRide() {
+        const pickup = document.getElementById("pickup").value.trim();
+
+        const drop = document.getElementById("drop").value.trim();
+
+        if (pickup === "" || drop === "") {
+          alert("Please enter pickup and drop location.");
+
+          return;
+        }
+
+        const fare = Math.floor(Math.random() * 300) + 100;
+
+        const distance = (Math.random() * 15 + 2).toFixed(1);
+
+        const eta = Math.floor(Math.random() * 30) + 10;
+
+        /* UPDATE */
+
+        document.getElementById("ridePrice").innerText = `₹${fare}`;
+
+        document.getElementById("rideRoute").innerText = `${pickup} → ${drop}`;
+
+        document.getElementById("rideTimeText").innerText = `${eta} mins`;
+
+        document.getElementById("mapFare").innerText = `₹${fare}`;
+
+        document.getElementById("mapDistance").innerText = `${distance} km`;
+
+        document.getElementById("mapEta").innerText = `${eta} mins`;
+      }
+    </script>
+  </body>
+</html>

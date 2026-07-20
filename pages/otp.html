@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CatchALiftt | OTP Verification</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/otp.css" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="otp-page">
+      <!-- Background -->
+
+      <div class="bg-circle bg-circle-1"></div>
+
+      <div class="bg-circle bg-circle-2"></div>
+
+      <!-- OTP Card -->
+
+      <div class="otp-card">
+        <!-- Brand -->
+
+        <div class="brand">
+          <img
+            src="../assets/images/logo.png"
+            class="brand-logo"
+            alt="CatchALiftt"
+          />
+
+          <h1 class="brand-title">CatchA<span>Liftt</span></h1>
+
+          <p class="brand-tagline">Designed for Introverts.</p>
+
+          <div class="brand-divider"></div>
+        </div>
+
+        <!-- Heading -->
+
+        <div class="heading">
+          <h2>Verify Your Number</h2>
+
+          <p>Enter the 6-digit verification code.</p>
+        </div>
+
+        <!-- Phone Number -->
+
+        <div class="mobile-info">
+          Code sent to
+
+          <strong id="mobileNumber"> +91 ********** </strong>
+        </div>
+
+        <!-- OTP Boxes -->
+
+        <div class="otp-wrapper">
+          <input
+            type="tel"
+            inputmode="numeric"
+            pattern="[0-9]*"
+            maxlength="1"
+            autocomplete="one-time-code"
+            class="otp-input"
+          />
+
+          <input
+            type="tel"
+            inputmode="numeric"
+            pattern="[0-9]*"
+            maxlength="1"
+            autocomplete="one-time-code"
+            class="otp-input"
+          />
+
+          <input
+            type="tel"
+            inputmode="numeric"
+            pattern="[0-9]*"
+            maxlength="1"
+            autocomplete="one-time-code"
+            class="otp-input"
+          />
+
+          <input
+            type="tel"
+            inputmode="numeric"
+            pattern="[0-9]*"
+            maxlength="1"
+            autocomplete="one-time-code"
+            class="otp-input"
+          />
+
+          <input
+            type="tel"
+            inputmode="numeric"
+            pattern="[0-9]*"
+            maxlength="1"
+            autocomplete="one-time-code"
+            class="otp-input"
+          />
+
+          <input
+            type="tel"
+            inputmode="numeric"
+            pattern="[0-9]*"
+            maxlength="1"
+            autocomplete="one-time-code"
+            class="otp-input"
+          />
+        </div>
+
+        <!-- Error Message -->
+
+        <small id="otpError"></small>
+
+        <!-- Verify Button -->
+
+        <button type="button" id="verifyBtn">Verify →</button>
+
+        <!-- Resend OTP -->
+
+        <div class="resend-container">
+          Didn't receive the code?
+
+          <span id="timer"> 30s </span>
+        </div>
+
+        <button id="resendBtn" class="resend-btn" disabled>Resend OTP</button>
+
+        <!-- Privacy -->
+
+        <div class="privacy">
+          🔒 Your phone number remains private. OTP is used only for secure
+          verification.
+        </div>
+
+        <!-- Prototype -->
+
+        <div class="version">Prototype V7</div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+
+    <script src="../js/storage.js"></script>
+
+    <script src="../js/session.js"></script>
+
+    <script src="../js/otp.js"></script>
+  </body>
+</html>

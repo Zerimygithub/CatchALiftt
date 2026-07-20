@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Booking Confirmed | CatchALift</title>
+
+    <link rel="stylesheet" href="../css/booking-confirmation.css" />
+  </head>
+
+  <body>
+    <div class="confirmation-page">
+      <div class="success-card">
+        <div class="success-icon">✓</div>
+
+        <h1>Ride Confirmed</h1>
+
+        <p>Your host has accepted the ride request.</p>
+
+        <div class="ride-id">Booking ID • CAL-784526</div>
+      </div>
+
+      <div class="host-card">
+
+    <div class="host-left">
+
+        <div class="avatar" id="hostAvatar">
+            AV
+        </div>
+
+        <div class="host-info">
+
+            <h2 id="hostName">
+                Loading...
+            </h2>
+
+            <p id="hostCommunity">
+                ⭐ Verified Community Host
+            </p>
+
+            <p id="hostVehicle">
+                Vehicle
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="host-right">
+
+        <div class="eta" id="hostEta">
+            --
+        </div>
+
+    </div>
+
+</div>
+
+      <div class="trip-card">
+        <h3>Trip Details</h3>
+
+        <div class="trip-row">
+          <span>Pickup</span>
+          <strong>Bluestone Store</strong>
+        </div>
+
+        <div class="trip-row">
+          <span>Drop</span>
+          <strong>Kempegowda Airport</strong>
+        </div>
+
+        <div class="trip-row">
+          <span>Vehicle</span>
+          <strong>Silver Honda City</strong>
+        </div>
+
+        <div class="trip-row">
+          <span>Fare</span>
+          <strong>₹420</strong>
+        </div>
+      </div>
+
+      <div class="status-card">
+        <h3>Ride Status</h3>
+
+        <div class="timeline">
+          <div class="step active">
+            <div class="dot"></div>
+            Ride Accepted
+          </div>
+
+          <div class="step active">
+            <div class="dot"></div>
+            Host Assigned
+          </div>
+
+          <div class="step">
+            <div class="dot"></div>
+            Host Arriving
+          </div>
+
+          <div class="step">
+            <div class="dot"></div>
+            Trip Started
+          </div>
+        </div>
+      </div>
+
+      <div class="action-grid">
+
+<button class="secondary-btn">
+Share Ride
+</button>
+
+<button class="secondary-btn">
+Call Host
+</button>
+
+</div>
+
+<div class="redirect-card">
+
+<div class="redirect-label">
+📍 Live tracking starts automatically
+</div>
+
+<div id="countdown" class="countdown">
+3
+</div>
+
+</div>
+
+    <script src="../js/booking-confirmation.js"></script>
+  </body>
+</html>

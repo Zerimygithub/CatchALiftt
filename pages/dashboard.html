@@ -1,0 +1,378 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <!-- ==========================================
+         BASIC META
+    =========================================== -->
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="theme-color" content="#F8F5F0" />
+
+    <meta name="description" content="CatchALiftt Dashboard" />
+
+    <title>CatchALiftt | Dashboard</title>
+
+    <!-- ==========================================
+         GOOGLE FONT
+    =========================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ==========================================
+         FONT AWESOME
+    =========================================== -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!-- ==========================================
+         DASHBOARD CSS
+    =========================================== -->
+
+    <link rel="stylesheet" href="../css/dashboard.css" />
+  </head>
+  <body>
+    <!-- ==========================================
+         DASHBOARD PAGE
+    =========================================== -->
+
+    <div class="dashboard-page">
+      <!-- Background Effects -->
+
+      <div class="bg-circle bg-left"></div>
+
+      <div class="bg-circle bg-right"></div>
+
+      <!-- ==========================================
+             TOP NAVIGATION
+        =========================================== -->
+
+      <header class="top-navbar">
+        <!-- Left -->
+
+        <div class="nav-left">
+          <a href="../index.html" class="brand-logo">
+            <img src="../assets/images/logo.png" alt="CatchALiftt Logo" />
+          </a>
+        </div>
+
+        <!-- Center -->
+
+        <div class="nav-center">
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+              type="text"
+              placeholder="Search routes, hosts or destinations"
+            />
+          </div>
+        </div>
+
+        <!-- Right -->
+
+        <div class="nav-right">
+          <!-- Notifications -->
+
+          <button class="nav-icon-btn" id="notificationBtn">
+            <i class="fa-regular fa-bell"></i>
+
+            <span class="notification-dot"></span>
+          </button>
+
+          <!-- Wallet -->
+
+          <button class="wallet-btn" id="walletBtn">
+            <i class="fa-solid fa-wallet"></i>
+
+            <span> ₹1,250 </span>
+          </button>
+
+          <!-- User -->
+
+          <button class="profile-btn" id="profileBtn">
+            <div class="profile-avatar">R</div>
+
+            <div class="profile-info">
+              <small> Welcome </small>
+
+              <strong id="dashboardUserName"> Rahul </strong>
+            </div>
+
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+      </header>
+      <!-- ==========================================
+             HERO SECTION
+        =========================================== -->
+
+      <section class="hero-section">
+        <!-- Left Side -->
+
+        <div class="hero-left">
+          <div class="welcome-block">
+            <span class="welcome-text"> Good Morning 👋 </span>
+
+            <h1>Ready for today's journey?</h1>
+
+            <p>Everything is ready. Your ride has been confirmed.</p>
+          </div>
+
+          <!-- Today's Journey -->
+
+          <div class="journey-card">
+            <div class="card-header">
+              <div>
+                <span class="card-label"> Today's Journey </span>
+
+                <h2>Home → Manyata Tech Park</h2>
+              </div>
+
+              <span class="ride-status"> Confirmed </span>
+            </div>
+
+            <!-- Timeline -->
+
+            <div class="timeline">
+              <div class="timeline-item active">
+                <div class="dot"></div>
+
+                <span> Ride Confirmed </span>
+              </div>
+
+              <div class="line"></div>
+
+              <div class="timeline-item">
+                <div class="dot"></div>
+
+                <span> Leave Home </span>
+              </div>
+
+              <div class="line"></div>
+
+              <div class="timeline-item">
+                <div class="dot"></div>
+
+                <span> Pickup </span>
+              </div>
+
+              <div class="line"></div>
+
+              <div class="timeline-item">
+                <div class="dot"></div>
+
+                <span> Destination </span>
+              </div>
+            </div>
+
+            <!-- Journey Details -->
+
+            <div class="journey-details">
+              <div class="detail-box">
+                <small> Host </small>
+
+                <strong> AJ • Arjun </strong>
+              </div>
+
+              <div class="detail-box">
+                <small> Pickup Time </small>
+
+                <strong> 08:30 AM </strong>
+              </div>
+
+              <div class="detail-box">
+                <small> Leave In </small>
+
+                <strong id="countdownTimer"> 18 mins </strong>
+              </div>
+            </div>
+
+            <button class="live-track-btn" id="liveTrackingBtn">
+              Live Tracking
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Side -->
+
+        <aside class="hero-right">
+          <div class="smart-card">
+            <span class="smart-title"> AI Smart Insight </span>
+
+            <h3>Perfect Day to Carpool</h3>
+
+            <p>
+              Your preferred host is available today with an estimated arrival
+              accuracy of 98%.
+            </p>
+          </div>
+
+          <div class="weather-card">
+            <span> 🌤️ Weather </span>
+
+            <h2>23°C</h2>
+
+            <p>Pleasant • No Rain Expected</p>
+          </div>
+        </aside>
+      </section>
+      <!-- ==========================================
+             DASHBOARD GRID
+        =========================================== -->
+
+      <section class="dashboard-grid">
+        <!-- ===============================
+                 Upcoming Journeys
+            ================================ -->
+
+        <div class="dashboard-card upcoming-card">
+          <div class="card-title">
+            <h3>Upcoming Journeys</h3>
+
+            <a href="#"> View All </a>
+          </div>
+
+          <div class="journey-list">
+            <div class="journey-item">
+              <div>
+                <strong> Tomorrow </strong>
+
+                <small> 08:30 AM </small>
+              </div>
+
+              <span class="status confirmed"> Confirmed </span>
+            </div>
+
+            <div class="journey-item">
+              <div>
+                <strong> Friday </strong>
+
+                <small> 08:45 AM </small>
+              </div>
+
+              <span class="status pending"> Pending </span>
+            </div>
+
+            <div class="journey-item">
+              <div>
+                <strong> Monday </strong>
+
+                <small> 09:00 AM </small>
+              </div>
+
+              <span class="status confirmed"> Confirmed </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===============================
+                 Wallet
+            ================================ -->
+
+        <div class="dashboard-card">
+          <h3>Wallet Balance</h3>
+
+          <h2 id="walletBalance">₹1,250</h2>
+
+          <p>Available for your next journey.</p>
+        </div>
+
+        <!-- ===============================
+                 Rewards
+            ================================ -->
+
+        <div class="dashboard-card">
+          <h3>Reward Points</h3>
+
+          <h2>1,240</h2>
+
+          <p>Earn more by completing journeys.</p>
+        </div>
+
+        <!-- ===============================
+                 Recent Activity
+            ================================ -->
+
+        <div class="dashboard-card activity-card">
+          <div class="card-title">
+            <h3>Recent Activity</h3>
+
+            <a href="#"> View All </a>
+          </div>
+
+          <ul class="activity-list">
+            <li>Journey booked successfully.</li>
+
+            <li>Wallet recharged with ₹500.</li>
+
+            <li>Host AJ accepted your request.</li>
+          </ul>
+        </div>
+      </section>
+      <!-- ==========================================
+             QUICK ACTIONS
+        =========================================== -->
+
+      <section class="quick-actions">
+        <h2>Quick Access</h2>
+
+        <div class="quick-grid">
+          <a href="ride-history.html" class="quick-item">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+
+            <span> Ride History </span>
+          </a>
+
+          <a href="saved-hosts.html" class="quick-item">
+            <i class="fa-solid fa-heart"></i>
+
+            <span> Saved Hosts </span>
+          </a>
+
+          <a href="support.html" class="quick-item">
+            <i class="fa-solid fa-headset"></i>
+
+            <span> Support </span>
+          </a>
+
+          <a href="settings.html" class="quick-item">
+            <i class="fa-solid fa-gear"></i>
+
+            <span> Settings </span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ==========================================
+             FOOTER
+        =========================================== -->
+
+      <footer class="dashboard-footer">
+        <p>© 2026 CatchALiftt. Every Journey Feels Lighter.</p>
+      </footer>
+    </div>
+
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
+
+    <script src="../js/storage.js"></script>
+
+    <script src="../js/session.js"></script>
+    <script src="../js/dashboard.js"></script>
+  </body>
+</html>
