@@ -1,0 +1,79 @@
+/* ===========================================================
+   CatchALiftt Theme
+   =========================================================== */
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+
+  color: var(--color-text);
+
+  font-family: var(--font-family);
+
+  line-height: 1.6;
+}
+
+/* Selection */
+
+::selection {
+  background: var(--color-primary);
+
+  color: #fff;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eeeeee;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b78829;
+}
+
+/* Links */
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+/* Images */
+
+img {
+  max-width: 100%;
+
+  display: block;
+}
+
+/* Buttons */
+
+button {
+  font-family: inherit;
+}
+
+/* Inputs */
+
+input,
+textarea,
+select {
+  font-family: inherit;
+}
