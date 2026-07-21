@@ -1,0 +1,149 @@
+/* ==========================================
+   MARGIN TOP
+========================================== */
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mt-xs {
+  margin-top: 4px;
+}
+
+.mt-sm {
+  margin-top: 8px;
+}
+
+.mt-md {
+  margin-top: 16px;
+}
+
+.mt-lg {
+  margin-top: 24px;
+}
+
+.mt-xl {
+  margin-top: 32px;
+}
+
+.mt-2xl {
+  margin-top: 48px;
+}
+
+.mt-3xl {
+  margin-top: 64px;
+}
+
+/* ==========================================
+   MARGIN BOTTOM
+========================================== */
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mb-xs {
+  margin-bottom: 4px;
+}
+
+.mb-sm {
+  margin-bottom: 8px;
+}
+
+.mb-md {
+  margin-bottom: 16px;
+}
+
+.mb-lg {
+  margin-bottom: 24px;
+}
+
+.mb-xl {
+  margin-bottom: 32px;
+}
+
+.mb-2xl {
+  margin-bottom: 48px;
+}
+
+.mb-3xl {
+  margin-bottom: 64px;
+}
+
+/* ==========================================
+   PADDING
+========================================== */
+
+.p-xs {
+  padding: 4px;
+}
+
+.p-sm {
+  padding: 8px;
+}
+
+.p-md {
+  padding: 16px;
+}
+
+.p-lg {
+  padding: 24px;
+}
+
+.p-xl {
+  padding: 32px;
+}
+
+.p-2xl {
+  padding: 48px;
+}
+/* ==========================================
+   HORIZONTAL PADDING
+========================================== */
+
+.px-sm {
+  padding-inline: 8px;
+}
+
+.px-md {
+  padding-inline: 16px;
+}
+
+.px-lg {
+  padding-inline: 24px;
+}
+
+.px-xl {
+  padding-inline: 32px;
+}
+
+/* ==========================================
+   VERTICAL PADDING
+========================================== */
+
+.py-sm {
+  padding-block: 8px;
+}
+
+.py-md {
+  padding-block: 16px;
+}
+
+.py-lg {
+  padding-block: 24px;
+}
+
+.py-xl {
+  padding-block: 32px;
+}
+/* ==========================================
+   AUTO MARGIN
+========================================== */
+
+.mx-auto {
+  margin-inline: auto;
+}
+
+.my-auto {
+  margin-block: auto;
+}
