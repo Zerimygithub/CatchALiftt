@@ -1,0 +1,73 @@
+/* ==========================================
+   SECTION SYSTEM
+========================================== */
+
+.section {
+  position: relative;
+
+  width: 100%;
+
+  padding-block: 64px;
+}
+
+.section-sm {
+  padding-block: 32px;
+}
+
+.section-lg {
+  padding-block: 96px;
+}
+
+.section-xl {
+  padding-block: 128px;
+}
+
+/* ==========================================
+   SECTION COLORS
+========================================== */
+
+.section-light {
+  background: var(--color-background);
+}
+
+.section-white {
+  background: #ffffff;
+}
+
+.section-dark {
+  background: var(--color-text);
+
+  color: white;
+}
+
+.section-transparent {
+  background: transparent;
+}
+/* ==========================================
+   SECTION DIVIDERS
+========================================== */
+
+.section-border-top {
+  border-top: 1px solid var(--color-border);
+}
+
+.section-border-bottom {
+  border-bottom: 1px solid var(--color-border);
+}
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+  .section {
+    padding-block: 48px;
+  }
+
+  .section-lg {
+    padding-block: 72px;
+  }
+
+  .section-xl {
+    padding-block: 96px;
+  }
+}
