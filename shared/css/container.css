@@ -1,0 +1,61 @@
+/* ==========================================
+   CONTAINER SYSTEM
+========================================== */
+
+/* Standard page container */
+.container {
+  width: 100%;
+  max-width: 1280px;
+
+  margin-inline: auto;
+
+  padding-inline: 24px;
+}
+
+/* Narrow container */
+.container-sm {
+  width: 100%;
+  max-width: 960px;
+
+  margin-inline: auto;
+
+  padding-inline: 24px;
+}
+
+/* Large container */
+.container-lg {
+  width: 100%;
+  max-width: 1440px;
+
+  margin-inline: auto;
+
+  padding-inline: 32px;
+}
+
+/* Full width container */
+.container-fluid {
+  width: 100%;
+
+  padding-inline: 24px;
+}
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 992px) {
+  .container,
+  .container-sm,
+  .container-lg,
+  .container-fluid {
+    padding-inline: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container,
+  .container-sm,
+  .container-lg,
+  .container-fluid {
+    padding-inline: 16px;
+  }
+}
