@@ -1,0 +1,36 @@
+.page-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  height: 72px;
+
+  padding: 0 20px;
+
+  background: #fff;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.page-title {
+  font-size: 22px;
+
+  font-weight: 600;
+}
+
+.back-button,
+.icon-button {
+  width: 42px;
+
+  height: 42px;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  font-size: 20px;
+}
